@@ -1,0 +1,795 @@
+/* Audemars Piguet Tarzı Lüks Tasarım */
+
+:root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-gray-light: #f5f5f5;
+    --color-gray: #999999;
+    --color-gray-dark: #333333;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--color-black);
+    background: var(--color-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+/* Header - Minimal ve Şık */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--color-black);
+    text-transform: uppercase;
+}
+
+.nav {
+    display: flex;
+    gap: 50px;
+}
+
+.nav-link {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-black);
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--color-black);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Section - Büyük ve Etkileyici */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    text-align: center;
+    color: var(--color-white);
+    max-width: 1200px;
+    padding: 0 40px;
+}
+
+.hero-title {
+    font-family: var(--font-serif);
+    font-size: clamp(48px, 8vw, 120px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+    font-family: var(--font-sans);
+    font-size: clamp(16px, 1.5vw, 20px);
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.btn-discover {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 18px 50px;
+    border: 1px solid var(--color-white);
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease-out 0.4s both;
+    background: transparent;
+}
+
+.btn-discover:hover {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+/* Section Header */
+.section-header {
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.section-label {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-gray);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--color-black);
+    text-transform: uppercase;
+}
+
+/* Tatlılar Section */
+.tatlilar-section {
+    padding: 0 0 120px;
+    background: var(--color-white);
+}
+
+.tatlilar-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+
+.tatli-card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    aspect-ratio: 1;
+    background: var(--color-white);
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tatli-card:nth-child(2n) {
+    border-right: none;
+}
+
+.tatli-card:last-child {
+    border-bottom: none;
+}
+
+/* Büyük modal için - çeşitler gösterimi */
+.modal-large {
+    max-width: 1200px;
+}
+
+.modal-large .cesitler-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.modal-large .cesit-image {
+    height: 200px;
+}
+
+.tatli-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.tatli-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tatli-card:hover .tatli-image img {
+    transform: scale(1.1);
+}
+
+.tatli-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.tatli-card:hover .tatli-overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+
+.tatli-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: var(--color-white);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.tatli-card:hover .tatli-info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.tatli-name {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.tatli-action {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* İletişim Section */
+.iletisim-section {
+    padding: 0 0 120px;
+    background: var(--color-gray-light);
+}
+
+.iletisim-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--color-black);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.iletisim-card {
+    background: var(--color-white);
+    padding: 80px 60px;
+    text-decoration: none;
+    color: var(--color-black);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.iletisim-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--color-black);
+    transition: left 0.4s ease;
+}
+
+.iletisim-card:hover::before {
+    left: 0;
+}
+
+.iletisim-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.iletisim-card:hover .iletisim-content {
+    color: var(--color-white);
+}
+
+.iletisim-card h3 {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.iletisim-card p {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    opacity: 0.7;
+}
+
+.iletisim-link {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid currentColor;
+    transition: all 0.3s ease;
+}
+
+.iletisim-card:hover .iletisim-link {
+    padding-left: 10px;
+}
+
+/* Footer */
+.footer {
+    padding: 60px 0;
+    background: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.footer-content p {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.4s ease;
+    overflow-y: auto;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+
+.modal-content {
+    background: var(--color-white);
+    max-width: 1000px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.5s ease;
+}
+
+.modal-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--color-black);
+    cursor: pointer;
+    z-index: 10;
+    font-family: var(--font-sans);
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+
+.modal-close:hover {
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 80px;
+}
+
+/* Çeşitler Grid */
+.cesitler-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.cesit-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.cesit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cesit-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.cesit-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.cesit-card:hover .cesit-image img {
+    transform: scale(1.1);
+}
+
+.cesit-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.cesit-info h4 {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--color-black);
+}
+
+.modal-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+
+.modal-title {
+    font-family: var(--font-serif);
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: var(--color-black);
+}
+
+.modal-description {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--color-gray-dark);
+    margin-bottom: 50px;
+    letter-spacing: 0.5px;
+}
+
+.modal-icerik {
+    background: var(--color-gray-light);
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+.modal-icerik h4 {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    color: var(--color-black);
+    text-transform: uppercase;
+}
+
+.modal-icerik ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-icerik li {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 300;
+    padding: 12px 0;
+    padding-left: 30px;
+    position: relative;
+    color: var(--color-gray-dark);
+    letter-spacing: 0.5px;
+}
+
+.modal-icerik li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--color-black);
+    font-weight: 300;
+}
+
+.modal-siparis {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn-siparis {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-white);
+    background: var(--color-black);
+    text-decoration: none;
+    padding: 18px 50px;
+    border: 1px solid var(--color-black);
+    transition: all 0.3s ease;
+}
+
+.btn-siparis:hover {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 40px;
+    }
+    
+    .tatlilar-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tatli-card {
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .tatli-card:last-child {
+        border-bottom: none;
+    }
+    
+    .cesitler-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .cesit-image {
+        height: 200px;
+    }
+    
+    .iletisim-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .header {
+        padding: 20px 0;
+    }
+    
+    .logo h1 {
+        font-size: 20px;
+    }
+    
+    .nav {
+        gap: 30px;
+    }
+    
+    .nav-link {
+        font-size: 12px;
+    }
+    
+    .hero {
+        margin-top: 70px;
+    }
+    
+    .section-header {
+        padding: 80px 0 60px;
+    }
+    
+    .tatlilar-section,
+    .iletisim-section {
+        padding-bottom: 80px;
+    }
+    
+    .modal-body {
+        padding: 40px 30px;
+    }
+    
+    .modal-image {
+        height: 300px;
+        margin-bottom: 30px;
+    }
+    
+    .modal-title {
+        font-size: 32px;
+    }
+    
+    .iletisim-card {
+        padding: 60px 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .nav {
+        gap: 20px;
+    }
+    
+    .modal.active {
+        padding: 20px;
+    }
+    
+    .modal-image {
+        height: 250px;
+    }
+    
+    .cesitler-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .cesit-image {
+        height: 180px;
+    }
+    
+    .cesit-info {
+        padding: 20px;
+    }
+}

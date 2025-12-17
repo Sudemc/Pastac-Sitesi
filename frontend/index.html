@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nazike Cücemen - Lezzetli Tatlılar</title>
+    <meta name="description"
+        content="Nazike Cücemen - El yapımı özel tatlılar. Cheesecake, San Sebastian, Butik Pasta, Ekler ve daha fazlası. WhatsApp ile hemen sipariş verin.">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Nazike Cücemen</h1>
+            </div>
+            <nav class="nav">
+                <a href="#tatlilar" class="nav-link">Tatlılar</a>
+                <a href="#iletisim" class="nav-link">İletişim</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="tatlıfoto/dubaicheesecake.png" alt="Nazike Cücemen Pastacı">
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">ORİJİNAL<br>LEZZETLER</h1>
+                <p class="hero-subtitle">Birbirinden lezzetli el yapımı tatlılar</p>
+                <a href="#tatlilar" class="btn-discover">Keşfet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tatlılar Section -->
+    <section id="tatlilar" class="tatlilar-section">
+        <div class="section-header">
+            <div class="container">
+                <span class="section-label">Koleksiyonumuz</span>
+                <h2 class="section-title">TATLILARIMIZ</h2>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Dinamik içerik buraya JavaScript ile eklenecek -->
+            <div id="tatlilar-container" class="tatlilar-grid">
+                <!-- Yükleniyor... -->
+                <div style="grid-column: 1 / -1; text-align: center; padding: 80px 40px;">
+                    <p style="font-family: var(--font-sans); color: var(--color-gray);">Menü yükleniyor...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Section -->
+    <section id="iletisim" class="iletisim-section">
+        <div class="section-header">
+            <div class="container">
+                <span class="section-label">İletişim</span>
+                <h2 class="section-title">BİZE ULAŞIN</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="iletisim-cards">
+                <a href="https://wa.me/905558033164" class="iletisim-card" target="_blank">
+                    <div class="iletisim-content">
+                        <h3>WhatsApp</h3>
+                        <p>0555 803 31 64</p>
+                        <span class="iletisim-link">Mesaj Gönder →</span>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/nazikecucemen/" class="iletisim-card" target="_blank">
+                    <div class="iletisim-content">
+                        <h3>Instagram</h3>
+                        <p>@nazikecucemen</p>
+                        <span class="iletisim-link">Profilimi Ziyaret Et →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Nazike Cücemen</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Çeşitler Modal -->
+    <div id="cesitlerModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <h2 class="modal-title" id="cesitlerTitle">Çeşitler</h2>
+                <div class="cesitler-grid" id="cesitlerGrid">
+                    <!-- Çeşitler JavaScript ile eklenecek -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detay Modal -->
+    <div id="tatliModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- İçerik JavaScript ile eklenecek -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

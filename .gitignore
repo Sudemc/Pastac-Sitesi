@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.local
+
+# Build outputs
+dist/
+build/
+
+# Original static files (keeping only microservice version)
+# Uncomment if you want to exclude original files
+# index.html
+# script.js
+# styles.css
+# start-server.bat
+# start-server.ps1
