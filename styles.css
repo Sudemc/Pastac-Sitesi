@@ -556,8 +556,8 @@ body {
 
 .modal-image {
     width: 100%;
-    height: 500px;
-    object-fit: cover;
+    height: auto;
+    display: block;
     margin-bottom: 50px;
 }
 
@@ -646,11 +646,39 @@ body {
     color: var(--color-black);
 }
 
+/* Geri Butonu - modal-close ile aynı stil */
+.btn-back {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--color-black);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    font-family: var(--font-sans);
+    font-weight: 300;
+    transition: transform 0.3s ease;
+    padding: 0;
+    outline: none;
+}
+
+.btn-back:hover {
+    transform: rotate(-90deg);
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -661,6 +689,7 @@ body {
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -672,6 +701,7 @@ body {
         opacity: 0;
         transform: translateY(60px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -683,29 +713,29 @@ body {
     .container {
         padding: 0 40px;
     }
-    
+
     .tatlilar-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .tatli-card {
         border-right: none;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
-    
+
     .tatli-card:last-child {
         border-bottom: none;
     }
-    
+
     .cesitler-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
-    
+
     .cesit-image {
         height: 200px;
     }
-    
+
     .iletisim-cards {
         grid-template-columns: 1fr;
     }
@@ -715,49 +745,49 @@ body {
     .container {
         padding: 0 30px;
     }
-    
+
     .header {
         padding: 20px 0;
     }
-    
+
     .logo h1 {
         font-size: 20px;
     }
-    
+
     .nav {
         gap: 30px;
     }
-    
+
     .nav-link {
         font-size: 12px;
     }
-    
+
     .hero {
         margin-top: 70px;
     }
-    
+
     .section-header {
         padding: 80px 0 60px;
     }
-    
+
     .tatlilar-section,
     .iletisim-section {
         padding-bottom: 80px;
     }
-    
+
     .modal-body {
         padding: 40px 30px;
     }
-    
+
     .modal-image {
         height: 300px;
         margin-bottom: 30px;
     }
-    
+
     .modal-title {
         font-size: 32px;
     }
-    
+
     .iletisim-card {
         padding: 60px 40px;
     }
@@ -767,28 +797,28 @@ body {
     .container {
         padding: 0 20px;
     }
-    
+
     .nav {
         gap: 20px;
     }
-    
+
     .modal.active {
         padding: 20px;
     }
-    
+
     .modal-image {
         height: 250px;
     }
-    
+
     .cesitler-grid {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-    
+
     .cesit-image {
         height: 180px;
     }
-    
+
     .cesit-info {
         padding: 20px;
     }

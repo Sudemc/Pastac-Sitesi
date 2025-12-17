@@ -1,0 +1,14 @@
+{
+    "name": "nazike-cucemen-website",
+    "version": "1.0.0",
+    "description": "Nazike Cücemen Tatlı Sitesi - Resim Optimizasyonu",
+    "scripts": {
+        "optimize-images": "node optimize-images.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "sharp": "^0.33.0"
+    }
+}

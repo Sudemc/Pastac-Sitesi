@@ -2,91 +2,91 @@
 const tatlilar = {
     // CHEESECAKE ÇEŞİTLERİ
     "cheesecake-baklavali": {
-        name: "Baklavalı Cheesecake",
+        name: "Baklavalı Porsiyon Cheesecake",
         image: "tatlıfoto/baklacalıcheesecake.png",
-        description: "Geleneksel baklava lezzeti ile modern cheesecake'in muhteşem buluşması. Antep fıstığı ve baklava parçaları ile süslenmiş eşsiz bir lezzet."
+        description: "Geleneksel Türk baklavasının çıtırlığını, cheesecake'in ipeksi dokusuyla tek porsiyonda buluşturduk. Altın sarısı çıtır yufkalar, yoğun Antep fıstığı ve özel peynir kremasının bu eşsiz uyumu, tatlı molalarınızın yeni favorisi olacak."
     },
     "cheesecake-baklavali-tum": {
         name: "Baklavalı Bütün Cheesecake",
         image: "tatlıfoto/baklavalıtümcheesecake.png",
-        description: "Bütün baklava ile kaplanmış muhteşem cheesecake. Özel günleriniz için ideal bir seçim."
+        description: "Geleneksel Türk baklavasının çıtırlığı ile ipeksi cheesecake dokusunun kusursuz uyumu. Bol Antep fıstığı, tereyağlı baklava yufkası ve özel peynir dolgusuyla hazırlanan bu bütün lezzet, en özel davet sofralarınızın yıldızı olmaya aday."
     },
     "cheesecake-beyaz-cikolatali-cilekli": {
         name: "Beyaz Çikolatalı Çilekli Cheesecake",
         image: "tatlıfoto/beyazcikolatalıcileklicheesecake.png",
-        description: "Beyaz çikolatanın zarif tatlılığı ve taze çileklerin ferahlığı bir arada."
+        description: "Beyaz çikolatanın yoğun hazzını, çileğin doğal asiditesiyle kırdık. Baymayan, içinizi ferahlatan, tam kıvamında bir lezzet. Üzerindeki bol sosu ve çilek süslemeleriyle hem gözünüze hem damağınıza hitap edecek."
     },
     "cheesecake-dubai": {
         name: "Dubai Cheesecake",
         image: "tatlıfoto/dubaicheesecake.png",
-        description: "Sosyal medyanın fenomen tatlısı Dubai çikolatasıyla buluşan özel cheesecake. Fıstık ezmesi ve kadayıf dolgulu."
+        description: "Sosyal medyayı sallayan o meşhur lezzet, şimdi cheesecake formunda! İpeksi cheesecake dokusunun üzerinde; bol Antep fıstığı kreması ve altın sarısı çıtır kadayıf dolgusu, en üstte ise nefis sütlü çikolata kaplaması. O meşhur \"çıtırtıyı\" her çatalda hissedeceksiniz."
     },
     "cheesecake-elmali": {
         name: "Elmalı Cheesecake",
         image: "tatlıfoto/elmalıcheesecake.png",
-        description: "Tarçınlı elma ile zenginleştirilmiş sonbahar aromalı cheesecake."
+        description: "Çıtır çıtır tereyağlı kırıntı hamurunun altında saklı bir lezzet şöleni! Hafif tarçınla sotelenmiş elma küpleri ve pürüzsüz cheesecake tabanının mükemmel uyumu. Tatlı, mayhoş ve kıtır dokuların bu dengeli birleşimine bayılacaksınız."
     },
     "cheesecake-fistikli": {
         name: "Fıstıklı Cheesecake",
         image: "tatlıfoto/fıstıklıcheesecake.png",
-        description: "Antep fıstığının yoğun aroması ile hazırlanan özel cheesecake."
+        description: "Yeşil altın Antep fıstığının en yoğun hali! Cheesecake'in o bildiğiniz ipeksi kremasını, %100 gerçek Antep fıstığı ezmesiyle harmanladık. Üzerinde fıstık parçaları barındıran bu lezzet, damakta bıraktığı yoğun aromasıyla tatlı standartlarınızı yükseltecek."
     },
     "cheesecake-kahveli": {
         name: "Kahveli Cheesecake",
         image: "tatlıfoto/kahvelicheesecake.png",
-        description: "Espresso aromalı, kahve severlerin favorisi cheesecake."
+        description: "Taze çekilmiş espresso çekirdeklerinin o büyüleyici kokusunu, cheesecake'in ferahlatıcı dokusuyla birleştirdik. Tatlı mı yesem kahve mi içsem kararsızlığına son. Kahve aroması ve ağızda eriyen kremasıyla, günün yorgunluğunu unutturacak sofistike bir lezzet."
     },
     "cheesecake-lotuslu": {
         name: "Lotuslu Cheesecake",
         image: "tatlıfoto/lotuslucheesecake.png",
-        description: "Biscoff bisküvisi ve Lotus ezmesi ile hazırlanan popüler lezzet."
+        description: "Dünyanın en sevilen karamelize bisküvisi Lotus Biscoff'un, cheesecake ile efsanevi buluşması. Tabanında yoğun bisküvi lezzeti, üzerinde akışkan Lotus kreması ve kenarlarında çıtır kırıntılar... Karamel ve tarçın notalarının bu kremamsı uyumuna bayılacaksınız."
     },
     "cheesecake-oreolu": {
         name: "Oreolu Cheesecake",
         image: "tatlıfoto/oreolucheesecake.png",
-        description: "Oreo bisküvilerinin çıtırlığı ve cheesecake'in yumuşaklığı bir arada."
+        description: "Sütün en iyi arkadaşı Oreo, şimdi cheesecake'in kalbinde! Yoğun kakaolu bisküvi tabanı ve içinde saklı iri Oreo parçacıklarıyla hazırlanan, her çatalda efsane lezzet. Hem göze hem damağa hitap eden bir siyah-beyaz klasiği."
     },
     "cheesecake-red-velvet": {
         name: "Red Velvet Cheesecake",
         image: "tatlıfoto/redvelvetcheesecake.png",
-        description: "Kırmızı kadife kek ve cheesecake'in lüks birleşimi."
+        description: "Klasik Red Velvet kekinin o meşhur nemli ve yumuşak yapısını, yoğun cheesecake dolgusuyla birleştirdik. Ağızda eriyen ipeksi kıvamı ve hafif kakao aromasıyla, tatlıda hem hafiflik hem de zenginlik arayanlar için kusursuz bir tercih."
     },
     "cheesecake-sutrecelli": {
         name: "Sütreçelli Cheesecake",
         image: "tatlıfoto/sutrecellicheesecake.png",
-        description: "Sütreçel dolgulu, karamelize lezzet seven herkes için."
+        description: "Sütün en tatlı, en büyüleyici hali! Ağır ağır pişerek o eşsiz karamel rengini ve tadını alan ev yapımı süt reçelini, ipeksi cheesecake dokusuyla buluşturduk. Süt tadı ve karamelize aromaların damakta yarattığı bu zengin lezzete hayran kalacaksınız."
     },
     "cheesecake-cikolata-kaplamali": {
         name: "Çikolata Kaplamalı Cheesecake",
         image: "tatlıfoto/çikolatakaplamalıcheesecake.png",
-        description: "Parlak çikolata ganaj ile kaplı şık cheesecake."
+        description: "Klasik dilimlerden sıkılanlara modern bir dokunuş. Özel çubuklu sunumu ve üzerindeki şık süslemeleriyle (fıstık, fındık, kurutulmuş meyve) tam bir görsel şölen. Kahvenizin yanına alabileceğiniz veya sevdiklerinize hediye edebileceğiniz en tatlı sürpriz."
     },
     "cheesecake-cikolatali": {
         name: "Çikolatalı Cheesecake",
         image: "tatlıfoto/çikolatalıcheesecake.png",
-        description: "Çikolata sevenler için yoğun çikolatalı cheesecake."
+        description: "Ağır olmayan ama yoğun bir lezzet arayanlar için. En kaliteli çikolatalarla hazırladığımız bu cheesecake, kadifemsi dokusuyla damağınızda süzülür. Kahvenizin yanına yakışacak, tam kıvamında bir lezzet."
     },
     "cheesecake-cilekli-fistikli": {
         name: "Çilekli Fıstıklı Cheesecake",
         image: "tatlıfoto/çileklifıstıklıcheesecake.png",
-        description: "Taze çilek ve Antep fıstığının muhteşem uyumu."
+        description: "Antep fıstığının zengin aroması, taze çileklerin ferahlatıcılığıyla buluştu! Pürüzsüz peynir dolgusu ve üzerindeki bol çilek sosu... Tatlılık ve mayhoşluğun bu eşsiz dengesine bayılacaksınız."
     },
 
     // SAN SEBASTİAN ÇEŞİTLERİ
     "san-sebastian-cilekli": {
         name: "Çilekli Sade San Sebastian",
         image: "tatlıfoto/cileklisadesansebastian.png",
-        description: "Klasik San Sebastian cheesecake üzerine taze çilek ile servis. Yanık yüzeyi ve kremsi dokusu ile eşsiz."
+        description: "Sade mi yesem, çilekli mi? Kararsız kalanlar için iki efsane lezzeti tek tabakta birleştirdik. Bir yarısında San Sebastian'ın o saf, kremamsı ve yanık lezzeti; diğer yarısında taze çilek sosunun ferahlatıcı mayhoşluğu. Seçim yapmanıza gerek yok, ikisinin de tadını çıkarın!"
     },
     "san-sebastian-cikolatali": {
         name: "Çikolatalı San Sebastian",
         image: "tatlıfoto/çikolatalısebastian.png",
-        description: "Çikolatanın yoğun lezzeti ile zenginleştirilmiş San Sebastian."
+        description: "Sosla değil, özüyle çikolatalı! İçeriğindeki yoğun kakao ve erimiş çikolata sayesinde rengini ve tadını tam kalbinden alır. Klasik San Sebastian'ın pürüzsüz peynir dokusu ile yoğun çikolata aromasının fırındaki muhteşem dansı. Çikolata krizlerinin en \"kremamsı\" çözümü"
     },
     "san-sebastian-fistikli": {
         name: "Fıstıklı San Sebastian",
         image: "tatlıfoto/fıstıklısansebastian.png",
-        description: "Antep fıstığının eşsiz aroması ile buluşan San Sebastian. Fıstık sevenler için vazgeçilmez."
+        description: "Peynir dolgusunun hafifliği, Antep fıstığı sosunun zenginliğiyle birleşti. Klasik San Sebastian lezzetini, bol fıstık sosu ile bambaşka bir boyuta taşıdık. Fıstık severler için vazgeçilmez bir tercih."
     },
 
     // EKLER ÇEŞİTLERİ
@@ -271,7 +271,7 @@ for (let i = 1; i <= 36; i++) {
 
 // Cheesecake çeşitleri
 const cheesecakeCesitleri = [
-    { key: "cheesecake-baklavali", name: "Baklavalı Cheesecake", image: "tatlıfoto/baklacalıcheesecake.png" },
+    { key: "cheesecake-baklavali", name: "Baklavalı Porsiyon Cheesecake", image: "tatlıfoto/baklacalıcheesecake.png" },
     { key: "cheesecake-baklavali-tum", name: "Baklavalı Bütün Cheesecake", image: "tatlıfoto/baklavalıtümcheesecake.png" },
     { key: "cheesecake-beyaz-cikolatali-cilekli", name: "Beyaz Çikolatalı Çilekli", image: "tatlıfoto/beyazcikolatalıcileklicheesecake.png" },
     { key: "cheesecake-dubai", name: "Dubai Cheesecake", image: "tatlıfoto/dubaicheesecake.png" },
@@ -363,6 +363,9 @@ const cesitlerGrid = document.getElementById('cesitlerGrid');
 const cesitlerTitle = document.getElementById('cesitlerTitle');
 const modalCloseButtons = document.querySelectorAll('.modal-close');
 
+// Aktif kategori takibi (geri butonu için)
+let activeKategori = null;
+
 // Tatlı kartlarına tıklama olayı
 document.querySelectorAll('.tatli-card').forEach(card => {
     card.addEventListener('click', function () {
@@ -380,17 +383,25 @@ function showCesitlerModal(kategoriKey) {
     const kategori = kategoriler[kategoriKey];
     if (!kategori) return;
 
+    // Aktif kategoriyi kaydet (geri butonu için)
+    activeKategori = kategoriKey;
+
     cesitlerTitle.textContent = kategori.baslik;
-    cesitlerGrid.innerHTML = kategori.cesitler.map(cesit => `
+    cesitlerGrid.innerHTML = kategori.cesitler.map(cesit => {
+        const webpImage = cesit.image.replace('tatlıfoto/', 'tatlıfoto/webp/').replace(/\.(png|jpg|jpeg)$/i, '.webp');
+        return `
         <div class="cesit-card" data-cesit="${cesit.key}">
             <div class="cesit-image">
-                <img src="${cesit.image}" alt="${cesit.name}" loading="lazy">
+                <picture>
+                    <source srcset="${webpImage}" type="image/webp">
+                    <img src="${cesit.image}" alt="${cesit.name}" loading="lazy">
+                </picture>
             </div>
             <div class="cesit-info">
                 <h4>${cesit.name}</h4>
             </div>
         </div>
-    `).join('');
+    `}).join('');
 
     cesitlerModal.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -428,8 +439,21 @@ function showModal(tatliKey) {
 
     if (!tatli) return;
 
+    const webpImage = tatli.image.replace('tatlıfoto/', 'tatlıfoto/webp/').replace(/\.(png|jpg|jpeg)$/i, '.webp');
+
+    // Geri butonu HTML (sadece bir kategoriden geldiyse göster)
+    const backButtonHtml = activeKategori ? `
+        <button class="btn-back" onclick="goBackToCategory()" title="${kategoriler[activeKategori].baslik}'e Dön">
+            ←
+        </button>
+    ` : '';
+
     modalBody.innerHTML = `
-        <img src="${tatli.image}" alt="${tatli.name}" class="modal-image" loading="lazy">
+        ${backButtonHtml}
+        <picture>
+            <source srcset="${webpImage}" type="image/webp">
+            <img src="${tatli.image}" alt="${tatli.name}" class="modal-image" loading="lazy">
+        </picture>
         <h2 class="modal-title">${tatli.name}</h2>
         <p class="modal-description">${tatli.description}</p>
         
@@ -448,8 +472,19 @@ function showModal(tatliKey) {
 
 // Butik pasta modal
 function showButikPastaModal(pastaNum) {
+    // Geri butonu HTML (butik pastalar kategorisinden geldiyse)
+    const backButtonHtml = activeKategori === 'butik-pasta' ? `
+        <button class="btn-back" onclick="goBackToCategory()" title="Butik Pasta Koleksiyonu'na Dön">
+            ←
+        </button>
+    ` : '';
+
     modalBody.innerHTML = `
-        <img src="tatlıfoto/butikpasta${pastaNum}.png" alt="Butik Pasta ${pastaNum}" class="modal-image" loading="lazy">
+        ${backButtonHtml}
+        <picture>
+            <source srcset="tatlıfoto/webp/butikpasta${pastaNum}.webp" type="image/webp">
+            <img src="tatlıfoto/butikpasta${pastaNum}.png" alt="Butik Pasta ${pastaNum}" class="modal-image" loading="lazy">
+        </picture>
         <h2 class="modal-title">Butik Pasta ${pastaNum}</h2>
         <p class="modal-description">Özel tasarım butik pasta. Doğum günleri, nişan, düğün ve tüm özel günleriniz için size özel tasarlanır.</p>
         
@@ -470,6 +505,20 @@ function showButikPastaModal(pastaNum) {
 function closeModal() {
     modal.classList.remove('active');
     document.body.style.overflow = 'auto';
+    // Aktif kategoriyi temizle (X ile kapatıldığında)
+    activeKategori = null;
+}
+
+// Kategoriye geri dönme fonksiyonu
+function goBackToCategory() {
+    if (activeKategori) {
+        const kategoriKey = activeKategori;
+        closeModal();
+        // Kategori sıfırlanmasını önle (geri dönüyoruz)
+        setTimeout(() => {
+            showCesitlerModal(kategoriKey);
+        }, 300);
+    }
 }
 
 // Modal kapatma olayları
