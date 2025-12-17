@@ -1,7 +1,7 @@
 // Nazike Cücemen - Mikroservis Frontend
-// API URL'leri
-const MENU_SERVICE_URL = 'http://localhost:3001';
-const COMM_SERVICE_URL = 'http://localhost:3002';
+// API URL'leri (Production - Render.com)
+const MENU_SERVICE_URL = 'https://menu-service-zsp6.onrender.com';
+const COMM_SERVICE_URL = 'https://communication-service-yd6s.onrender.com';
 
 // Global state
 let menuData = null;
