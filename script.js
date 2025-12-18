@@ -91,41 +91,41 @@ const tatlilar = {
 
     // EKLER ÇEŞİTLERİ
     "ekler-fistikli": {
-        name: "Fıstıklı Ekler",
+        name: "Antep Fıstıklı Ekler",
         image: "tatlıfoto/fıstıklıekler.png",
-        description: "Antep fıstıklı krema dolgulu, fıstık parçaları ile süslenmiş özel ekler."
+        description: "Antep fıstığının en tatlı hali! İncecik hamuru, içinde damağı saran ipeksi pastacı kreması ve üzerinde yoğun Antep fıstığı kaplaması. Hem göze hem damağa hitap eden, bol malzemeli bir lezzet şöleni."
     },
     "ekler-lavantali": {
         name: "Lavantalı Ekler",
         image: "tatlıfoto/lavantalıekler.png",
-        description: "Lavanta aromalı krema ile doldurulmuş zarif ekler."
+        description: "Klasik tatlardan sıkılanlar için sıra dışı bir dokunuş. Lavantanın sakinleştirici aromasını, incecik hamuru ve ipeksi krema ile buluşturduk. İlk ısırıkta şaşırtan, sonrasında vazgeçilmez olan, buram buram bahar kokulu bir lezzet."
     },
     "ekler-cikolatali": {
         name: "Çikolatalı Ekler",
         image: "tatlıfoto/çikolatalıekler.png",
-        description: "Klasik çikolata kremalı ekler. Her zaman popüler olan favori."
+        description: "Bazı lezzetlerin modası asla geçmez. İncecik hamuru, içinde taşan yumuşacık çikolatalı pastacı kreması ve üzerinde parlayan gerçek çikolata sosu. Bildiğiniz, özlediğiniz ve her zaman mutlu eden o efsane lezzet."
     },
 
     // TART ÇEŞİTLERİ
     "tart-kalpli": {
         name: "Kalpli Creme Tart",
         image: "tatlıfoto/kalplicremetart.png",
-        description: "Kalp şeklinde hazırlanan romantik creme tart. Özel günler için ideal."
+        description: "Ballı bisküvinin karamelize tadı, kremanın hafifliği ve çikolatanın dayanılmaz lezzeti tek bir kalpte buluştu. Üzeri en sevilen çikolatalarla donatılmış bu kalp pasta, lezzetten ödün veremeyenler ideal bir seçenek."
     },
     "tart-kalp-cicekli": {
-        name: "Kalp Çiçekli Creme Tart",
+        name: "Çiçekli Bahçesi Kalp Creme Tart",
         image: "tatlıfoto/kalpçiçeklicremetart.png",
-        description: "Çiçek süslemeli kalp tart. Zarif ve şık sunumu ile göz kamaştırıcı."
+        description: "Ballı bisküvi ve ipeksi krema katmanlarını, canlı çiçeklerin doğal güzelliği ve çikolatalarımızla süsledik. Görüntüsüyle büyüleyen, tadıyla hafifleten bir lezzet."
     },
     "tart-kremali": {
         name: "Kremalı Tart",
         image: "tatlıfoto/kremalıtart.png",
-        description: "Klasik kremalı tart. Çıtır taban ve yumuşak krema ile muhteşem."
+        description: "Tereyağlı kıtır tart hamuru kaseleri içinde, bulut gibi hafif özel pastacı kreması. Zirvesindeki taze ahududunun (frambuaz) mayhoşluğu, kremanın tatlılığıyla mükemmel bir denge kuruyor. Tek lokmada mutluluk arayanlar için."
     },
     "tart-fistikli": {
         name: "Fıstıklı Tart",
         image: "tatlıfoto/fıstıklıtart.png",
-        description: "Antep fıstıklı kremalı tart. Fıstığın yoğun aroması ile."
+        description: "Antep fıstığının en yoğun ve en asil hali. Tereyağlı kıtır tart hamurunun içini, gerçek Antep fıstığıyla hazırladığımız özel dolguyla taçlandırdık. Her lokmada damağınıza yayılan o zengin fıstık aroması ve üzerindeki taze fıstık parçalarıyla, tatlıda kalite arayanlar için eşsiz bir tercih."
     },
 
     // PUFF & PROFİTEROL
@@ -147,61 +147,61 @@ const tatlilar = {
 
     // BUTİK ÇİKOLATA
     "butik-cikolata-cilekli": {
-        name: "Çilekli Dolgulu Çikolata",
+        name: "Karışık Dolgulu Çikolata",
         image: "tatlıfoto/butikçikolata.png",
-        description: "Çilekli krema dolgulu el yapımı butik çikolata."
+        description: "Çikolatayı bir sanat eserine dönüştürdük. En kaliteli kakao çekirdeklerinden üretilen incecik, çıtır bir dış kabuk ve içerisinde damağınızı şaşırtacak akışkan dolgular... Koruyucu ve yapay aroma içermeyen, tamamen el işçiliğiyle hazırlanan bu koleksiyon; limonun ferahlığından Lotus'un karamelize tadına, fıstığın asaletinden orman meyvelerinin canlılığına kadar uzanan bir lezzet yolculuğu sunuyor. Kendini şımartmak veya sevdiklerine unutulmaz bir hediye vermek isteyenler için."
     },
     "butik-cikolata-lotuslu": {
-        name: "Lotuslu Dolgulu Çikolata",
+        name: "Lotus Biscoff Dolgulu Çikolata",
         image: "tatlıfoto/butikçikolata2.png",
-        description: "Lotus ezmesi dolgulu özel butik çikolata."
+        description: "Lotus bisküvisinin o kendine has karamelize ve baharatlı tadını, lezziz bir dolgu haline getirdik. Çıtır çikolata kabuğuyla birleşen bu yoğun lezzet, kahve keyfinizin en iyi eşlikçisi."
     },
     "butik-cikolata-limonlu": {
-        name: "Limonlu Dolgulu Çikolata",
+        name: "Limon Dolgulu Çikolata",
         image: "tatlıfoto/dolgulubutikçikolata.png",
-        description: "Limon kreması dolgulu ferahlatıcı butik çikolata."
+        description: "Çikolatanın tatlılığını, taze limonların doğal asiditesiyle dengeledik. Isırdığınız anda damağınıza yayılan o ferah, narenciye aromalı dolgu, size bir yaz esintisi yaşatacak."
     },
     "butik-cikolata-frambuazli": {
-        name: "Frambuazlı Dolgulu Çikolata",
+        name: "Frambuaz Dolgulu Çikolata",
         image: "tatlıfoto/dolguluçikolata2.png",
-        description: "Frambuaz dolgulu taze aromalı butik çikolata."
+        description: "Gerçek frambuaz püresiyle hazırlanan, rengini ve tadını tamamen meyveden alan asil bir lezzet. Frambuazın doğal mayhoşluğu ile çikolatanın yoğunluğu arasında kurulan kusursuz denge."
     },
     "butik-cikolata-karamelli": {
-        name: "Karamelli Dolgulu Çikolata",
+        name: "Karamel Dolgulu Çikolata",
         image: "tatlıfoto/karamelliçikolata.png",
-        description: "Tuzlu karamel dolgulu premium butik çikolata."
+        description: "Klasiklerden vazgeçmeyenler için. İncecik çikolata kabuğu kırıldığında dışarı süzülen, ev yapımı, yoğun kıvamlı ve tereyağlı karamel dolgusu. Tatlı krizlerinin kesin çözümü."
     },
 
     // PASTALAR
     "pasta-elmali": {
-        name: "Elmalı Pasta",
+        name: "File Bademli Elmalı Pasta",
         image: "tatlıfoto/elmalıpasta.png",
-        description: "Taze elmalar ve tarçın ile hazırlanan sonbahar lezzeti."
+        description: "Altın sarısı rengi ve üzerindeki cömert badem kaplamasıyla iştah kabartan bir klasik. Elmanın mayhoşluğu ile bademin zengin aromasının birleştiği bu pasta, hafifliğiyle baymıyor, lezzetiyle iz bırakıyor. Misafir ikramlarının vazgeçilmezi."
     },
     "pasta-cilekli": {
-        name: "Çilekli Pasta",
+        name: "Çilekli Fraiser Pasta",
         image: "tatlıfoto/çileklipasta.png",
-        description: "Taze çileklerle süslenmiş klasik pasta."
+        description: "Fransız pastacılığının en şık imzası. İki kat yumuşacık pandispanya arasında, kenarlara özenle dizilmiş taze çilekler ve ipeksi dokusuyla damakta eriyen özel kreması. Hem görüntüsüyle büyüleyen hem de lezzetiyle hafif ve ferah bir bahar rüyası."
     },
     "pasta-fistikli-fraizer": {
-        name: "Fıstıklı Fraizer Pasta",
+        name: "Fıstıklı Fraiser Pasta",
         image: "tatlıfoto/fıstıklıfraizerpasta.png",
-        description: "Fransız Fraisier pastasının fıstıklı versiyonu."
+        description: "Fransız klasiğine \"Yeşil Altın\" dokunuşu. Klasik vanilyalı krema yerine, bol Antep fıstığı ezmesiyle zenginleştirilmiş gurme bir krema kullandık. Taze çileklerin asiditesi, fıstıklı kremanın yoğunluğunu hafifleterek ortaya sofistike bir tat çıkarıyor. Sıradan tatlardan sıkılanlar ve kalite arayanlar için kusursuz bir seçim."
     },
     "pasta-fistikli-royal": {
-        name: "Fıstıklı Royal Kremalı Pasta",
+        name: "Fıstıklı Roral Kremalı Pasta",
         image: "tatlıfoto/fıstıklıroyalkremalıpasta.png",
-        description: "Royal kremalı, fıstıklı özel gün pastası."
+        description: "Bazen en güzeli, en sade ve en yumuşak olanıdır. İçinde dikkatinizi dağıtacak hiçbir sertlik yok. Sadece özel Royal kremasının verdiği o yoğun haz ve ağızda dağılan kekin uyumu var. Kendinizi şımartmak istediğiniz o anlar için pürüzsüz bir kaçamak."
     },
     "pasta-rulo": {
         name: "Rulo Pasta",
         image: "tatlıfoto/rulopasta.png",
-        description: "Yumuşak pandispanya ve kremalı rulo pasta."
+        description: "Çatalla dokunduğunuz an hissedeceğiniz o puf puf doku... Kırılmadan, nazikçe sarılmış sünger kekin (pandispanya) içinde saklı, ipeksi bir krema dolgusu. Ağır olmayan, baymayan ve yedikçe yediren hafif bir lezzet arayanlar için kusursuz bir seçim."
     },
     "pasta-porsiyon-1": {
         name: "Porsiyon Pasta",
         image: "tatlıfoto/porsiyonpasta1.png",
-        description: "Tek kişilik özel porsiyon pastalar."
+        description: "Büyük kutlamaların lezzetini tek porsiyona sığdırdık. Şık silindir formu, katman katman lezzeti ve üzerindeki zarif çiçek dokunuşlarıyla; söz, nişan veya doğum günü gibi özel günlerinizde misafirlerinize sunabileceğiniz en prestijli ikram."
     },
     "pasta-porsiyon-2": {
         name: "Porsiyon Pasta Özel",
@@ -296,7 +296,7 @@ const sanSebastianCesitleri = [
 
 // Ekler çeşitleri
 const eklerCesitleri = [
-    { key: "ekler-fistikli", name: "Fıstıklı Ekler", image: "tatlıfoto/fıstıklıekler.png" },
+    { key: "ekler-fistikli", name: "Antep Fıstıklı Ekler", image: "tatlıfoto/fıstıklıekler.png" },
     { key: "ekler-lavantali", name: "Lavantalı Ekler", image: "tatlıfoto/lavantalıekler.png" },
     { key: "ekler-cikolatali", name: "Çikolatalı Ekler", image: "tatlıfoto/çikolatalıekler.png" }
 ];
@@ -304,26 +304,26 @@ const eklerCesitleri = [
 // Tart çeşitleri
 const tartCesitleri = [
     { key: "tart-kalpli", name: "Kalpli Creme Tart", image: "tatlıfoto/kalplicremetart.png" },
-    { key: "tart-kalp-cicekli", name: "Kalp Çiçekli Creme Tart", image: "tatlıfoto/kalpçiçeklicremetart.png" },
+    { key: "tart-kalp-cicekli", name: "Çiçekli Bahçesi Kalp Creme Tart", image: "tatlıfoto/kalpçiçeklicremetart.png" },
     { key: "tart-kremali", name: "Kremalı Tart", image: "tatlıfoto/kremalıtart.png" },
     { key: "tart-fistikli", name: "Fıstıklı Tart", image: "tatlıfoto/fıstıklıtart.png" }
 ];
 
 // Butik Çikolata çeşitleri
 const cikolataCesitleri = [
-    { key: "butik-cikolata-cilekli", name: "Çilekli Dolgulu Çikolata", image: "tatlıfoto/butikçikolata.png" },
-    { key: "butik-cikolata-lotuslu", name: "Lotuslu Dolgulu Çikolata", image: "tatlıfoto/butikçikolata2.png" },
-    { key: "butik-cikolata-limonlu", name: "Limonlu Dolgulu Çikolata", image: "tatlıfoto/dolgulubutikçikolata.png" },
-    { key: "butik-cikolata-frambuazli", name: "Frambuazlı Dolgulu Çikolata", image: "tatlıfoto/dolguluçikolata2.png" },
-    { key: "butik-cikolata-karamelli", name: "Karamelli Dolgulu Çikolata", image: "tatlıfoto/karamelliçikolata.png" }
+    { key: "butik-cikolata-cilekli", name: "Karışık Dolgulu Çikolata", image: "tatlıfoto/butikçikolata.png" },
+    { key: "butik-cikolata-lotuslu", name: "Lotus Biscoff Dolgulu Çikolata", image: "tatlıfoto/butikçikolata2.png" },
+    { key: "butik-cikolata-limonlu", name: "Limon Dolgulu Çikolata", image: "tatlıfoto/dolgulubutikçikolata.png" },
+    { key: "butik-cikolata-frambuazli", name: "Frambuaz Dolgulu Çikolata", image: "tatlıfoto/dolguluçikolata2.png" },
+    { key: "butik-cikolata-karamelli", name: "Karamel Dolgulu Çikolata", image: "tatlıfoto/karamelliçikolata.png" }
 ];
 
 // Pasta çeşitleri
 const pastaCesitleri = [
-    { key: "pasta-elmali", name: "Elmalı Pasta", image: "tatlıfoto/elmalıpasta.png" },
-    { key: "pasta-cilekli", name: "Çilekli Pasta", image: "tatlıfoto/çileklipasta.png" },
-    { key: "pasta-fistikli-fraizer", name: "Fıstıklı Fraizer Pasta", image: "tatlıfoto/fıstıklıfraizerpasta.png" },
-    { key: "pasta-fistikli-royal", name: "Fıstıklı Royal Kremalı", image: "tatlıfoto/fıstıklıroyalkremalıpasta.png" },
+    { key: "pasta-elmali", name: "File Bademli Elmalı Pasta", image: "tatlıfoto/elmalıpasta.png" },
+    { key: "pasta-cilekli", name: "Çilekli Fraiser Pasta", image: "tatlıfoto/çileklipasta.png" },
+    { key: "pasta-fistikli-fraizer", name: "Fıstıklı Fraiser Pasta", image: "tatlıfoto/fıstıklıfraizerpasta.png" },
+    { key: "pasta-fistikli-royal", name: "Fıstıklı Roral Kremalı Pasta", image: "tatlıfoto/fıstıklıroyalkremalıpasta.png" },
     { key: "pasta-rulo", name: "Rulo Pasta", image: "tatlıfoto/rulopasta.png" },
     { key: "pasta-porsiyon-1", name: "Porsiyon Pasta", image: "tatlıfoto/porsiyonpasta1.png" },
     { key: "pasta-porsiyon-2", name: "Porsiyon Pasta Özel", image: "tatlıfoto/porsiyonpasta2.png" }
@@ -389,6 +389,11 @@ function showCesitlerModal(kategoriKey) {
     cesitlerTitle.textContent = kategori.baslik;
     cesitlerGrid.innerHTML = kategori.cesitler.map(cesit => {
         const webpImage = cesit.image.replace('tatlıfoto/', 'tatlıfoto/webp/').replace(/\.(png|jpg|jpeg)$/i, '.webp');
+        const infoHtml = kategoriKey === 'butik-pasta' ? '' : `
+            <div class="cesit-info">
+                <h4>${cesit.name}</h4>
+            </div>`;
+
         return `
         <div class="cesit-card" data-cesit="${cesit.key}">
             <div class="cesit-image">
@@ -397,9 +402,7 @@ function showCesitlerModal(kategoriKey) {
                     <img src="${cesit.image}" alt="${cesit.name}" loading="lazy">
                 </picture>
             </div>
-            <div class="cesit-info">
-                <h4>${cesit.name}</h4>
-            </div>
+            ${infoHtml}
         </div>
     `}).join('');
 
@@ -485,8 +488,7 @@ function showButikPastaModal(pastaNum) {
             <source srcset="tatlıfoto/webp/butikpasta${pastaNum}.webp" type="image/webp">
             <img src="tatlıfoto/butikpasta${pastaNum}.png" alt="Butik Pasta ${pastaNum}" class="modal-image" loading="lazy">
         </picture>
-        <h2 class="modal-title">Butik Pasta ${pastaNum}</h2>
-        <p class="modal-description">Özel tasarım butik pasta. Doğum günleri, nişan, düğün ve tüm özel günleriniz için size özel tasarlanır.</p>
+
         
         <div class="modal-siparis">
             <a href="https://wa.me/905558033164?text=Merhaba, Butik Pasta ${pastaNum} tasarımı için sipariş vermek istiyorum." 
