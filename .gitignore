@@ -29,3 +29,6 @@ build/
 # styles.css
 # start-server.bat
 # start-server.ps1
+
+# Local Netlify folder
+.netlify
