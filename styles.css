@@ -743,83 +743,305 @@ body {
 
 @media (max-width: 768px) {
     .container {
-        padding: 0 30px;
+        padding: 0 20px;
     }
 
     .header {
-        padding: 20px 0;
+        padding: 15px 0;
     }
 
     .logo h1 {
-        font-size: 20px;
-    }
-
-    .nav {
-        gap: 30px;
-    }
-
-    .nav-link {
-        font-size: 12px;
-    }
-
-    .hero {
-        margin-top: 70px;
-    }
-
-    .section-header {
-        padding: 80px 0 60px;
-    }
-
-    .tatlilar-section,
-    .iletisim-section {
-        padding-bottom: 80px;
-    }
-
-    .modal-body {
-        padding: 40px 30px;
-    }
-
-    .modal-image {
-        height: 300px;
-        margin-bottom: 30px;
-    }
-
-    .modal-title {
-        font-size: 32px;
-    }
-
-    .iletisim-card {
-        padding: 60px 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 20px;
+        font-size: 18px;
     }
 
     .nav {
         gap: 20px;
     }
 
-    .modal.active {
+    .nav-link {
+        font-size: 11px;
+    }
+
+    .hero {
+        margin-top: 60px;
+        height: calc(100vh - 60px);
+    }
+
+    .section-header {
+        padding: 60px 0 40px;
+    }
+
+    .tatlilar-section,
+    .iletisim-section {
+        padding-bottom: 60px;
+    }
+
+    /* Mobilde tatlı bilgisi her zaman görünür */
+    .tatli-info {
+        transform: translateY(0);
+        opacity: 1;
         padding: 20px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+    }
+
+    .tatli-name {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .tatli-action {
+        font-size: 11px;
+    }
+
+    /* Modal tam ekran */
+    .modal.active {
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    .modal-content {
+        max-height: 100vh;
+        min-height: 100vh;
+        border-radius: 0;
+    }
+
+    .modal-body {
+        padding: 60px 20px 30px;
+    }
+
+    .modal-close {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+    }
+
+    .btn-back {
+        top: 15px;
+        left: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
     }
 
     .modal-image {
-        height: 250px;
+        height: auto;
+        max-height: 300px;
+        margin-bottom: 25px;
     }
 
+    .modal-title {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .modal-description {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    /* Daha büyük sipariş butonu */
+    .btn-siparis {
+        display: block;
+        width: 100%;
+        padding: 20px 30px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .modal-siparis {
+        margin-top: 30px;
+    }
+
+    /* Çeşitler grid */
     .cesitler-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
+        margin-top: 15px;
+    }
+
+    .modal-large .modal-title {
+        margin-bottom: 10px;
     }
 
     .cesit-image {
-        height: 180px;
+        height: 150px;
     }
 
     .cesit-info {
-        padding: 20px;
+        padding: 15px 10px;
+    }
+
+    .cesit-info h4 {
+        font-size: 14px;
+    }
+
+    /* İletişim kartları */
+    .iletisim-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .iletisim-card {
+        padding: 50px 30px;
+    }
+
+    .iletisim-card h3 {
+        font-size: 26px;
+    }
+
+    .iletisim-card p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .header {
+        padding: 12px 0;
+    }
+
+    .logo h1 {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+
+    .nav-link {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+    }
+
+    .hero {
+        margin-top: 50px;
+        height: calc(100vh - 50px);
+    }
+
+    .hero-title {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .btn-discover {
+        padding: 15px 35px;
+        font-size: 12px;
+    }
+
+    .section-header {
+        padding: 50px 0 30px;
+    }
+
+    .section-label {
+        font-size: 10px;
+        margin-bottom: 15px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .tatli-card {
+        aspect-ratio: 4/3;
+    }
+
+    .tatli-name {
+        font-size: 18px;
+    }
+
+    .modal.active {
+        padding: 0;
+    }
+
+    .modal-body {
+        padding: 55px 15px 25px;
+    }
+
+    .modal-close {
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
+        font-size: 26px;
+    }
+
+    .btn-back {
+        top: 12px;
+        left: 12px;
+        width: 36px;
+        height: 36px;
+        font-size: 26px;
+    }
+
+    .modal-image {
+        max-height: 250px;
+    }
+
+    .modal-title {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .modal-description {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .btn-siparis {
+        padding: 18px 25px;
+        font-size: 13px;
+    }
+
+    .cesitler-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .cesit-image {
+        height: 120px;
+    }
+
+    .cesit-info {
+        padding: 12px 8px;
+    }
+
+    .cesit-info h4 {
+        font-size: 12px;
+    }
+
+    .iletisim-card {
+        padding: 35px 20px;
+    }
+
+    .iletisim-card h3 {
+        font-size: 22px;
+    }
+
+    .iletisim-card p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .iletisim-link {
+        font-size: 11px;
+    }
+
+    .footer {
+        padding: 40px 0;
+    }
+
+    .footer-content p {
+        font-size: 12px;
     }
 }
