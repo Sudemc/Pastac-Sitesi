@@ -132,17 +132,17 @@ const tatlilar = {
     "creme-puff": {
         name: "Creme Puff",
         image: "tatlıfoto/cremepuff.png",
-        description: "Hafif ve kabarık hamur içinde vanilya kreması. Klasik Fransız tatlısı."
+        description: "Dışı kıtır, içi yumuşacık bir sürpriz! Özel \"Craquelin\" (kıtır bisküvi) katmanıyla fırınlanan hamuru, denemeden geçmek istemeyeceğiniz bir deneyim sunuyor. İçindeki pürüzsüz ve yoğun krema dolgusu ise bu çıtırlığı mükemmel bir yumuşaklıkla dengeliyor. Hem dokusuyla hem lezzetiyle modern bir klasik."
     },
     "creme-puff-fistikli": {
         name: "Fıstıklı Kremalı Creme Puff",
         image: "tatlıfoto/fıstıklıkremalıcremepuff.png",
-        description: "Antep fıstıklı krema ile doldurulmuş özel creme puff."
+        description: "Altın sarısı pişmiş, hafifçe kıtır şu hamurunun içinde iki farklı dünya buluştu: Bir yanda yoğun ve zengin Antep fıstıklı krema, tam kalbinde ise ferahlatıcı frambuaz dolgusu. Fıstığın asil tadını, frambuazın mayhoşluğuyla dengeleyen bu lezzet, her ısırıkta damağınızda bir şölen yaratacak."
     },
     "profiterol-rocher": {
         name: "Rocher Profiterol",
         image: "tatlıfoto/rocherprofiterol.png",
-        description: "Ferrero Rocher tadında, fındıklı çikolatalı özel profiterol."
+        description: "Çikolata ve fındığın o efsanevi uyumu... Yumuşacık hamur toplarının içini özel krema ile doldurduk, dışını ise \"Rocher\" usulü parça fındıklı gurme çikolata ile kapladık. Her lokmada hem fındığın kavruk tadını hem de çikolatanın yoğunluğunu hissedeceğiniz, el yapımı özel bir lezzet."
     },
 
     // BUTİK ÇİKOLATA
@@ -204,58 +204,58 @@ const tatlilar = {
         description: "Büyük kutlamaların lezzetini tek porsiyona sığdırdık. Şık silindir formu, katman katman lezzeti ve üzerindeki zarif çiçek dokunuşlarıyla; söz, nişan veya doğum günü gibi özel günlerinizde misafirlerinize sunabileceğiniz en prestijli ikram."
     },
     "pasta-porsiyon-2": {
-        name: "Porsiyon Pasta Özel",
+        name: "Porsiyon Çikolatalı Fıstıklı Pasta",
         image: "tatlıfoto/porsiyonpasta2.png",
-        description: "Farklı tasarımlarda porsiyon pastalar."
+        description: "Yumuşacık kek katmanları arasında özel pastacı kreması ve kenarları saran taze çilek dilimleri... En üstte ise ince bir çikolata katmanı üzerine cömertçe serpiştirilmiş Antep fıstığı. Meyvenin ferahlığı, fıstığın çıtırlığı ve kremanın yumuşaklığı tek bir çatada buluştu."
     },
 
     // MAKARON
     "makaron-frambuazli": {
         name: "Frambuazlı Makaron",
         image: "tatlıfoto/frambuazlımakaron.png",
-        description: "Taze frambuaz aromalı Fransız makaronu."
+        description: "Yapay aroma değil, gerçek meyve özü! Mevsimin en güzel frambuazlarıyla hazırlanan yoğun dolgusu, çıtır dış kabukla buluştuğunda damağınızda patlayan bir lezzet şölenine dönüşüyor. Rengini ve tadını tamamen doğadan alan, hafif ve zarif bir tercih."
     },
     "makaron-fistikli": {
         name: "Fıstıklı Makaron",
         image: "tatlıfoto/fıstıklımakaron.png",
-        description: "Antep fıstıklı özel makaron."
+        description: "Fıstık severler için başyapıt. Sadece rengiyle değil, damağı kaplayan tadıyla da iddialı. Birinci kalite Antep fıstığı ezmesiyle hazırlanan özel harcı, makaronun narin dokusuyla birleşerek çay saatinize lüks bir dokunuş katıyor."
     },
 
     // TEK TATLILAR (Kategorisiz)
     "cake-pop": {
         name: "Cake Pop",
         image: "tatlıfoto/cakepop.png",
-        description: "Çubukta mini kekler. Parti ve özel günler için ideal."
+        description: "Kutlamaların ve partilerin neşesi! Rengarenk çikolata kaplamaları ve şeker süslemeleriyle hem göze hem damağa hitap eden, çubukta servis edilen nefis kek topları. Çocuklar için yemesi en eğlenceli, büyükler için kahve yanına en yakışan atıştırmalık."
     },
     "coco-star": {
-        name: "Coco Star",
+        name: "Cocostar Pasta",
         image: "tatlıfoto/cocostrar.png",
-        description: "Hindistan cevizi dolgulu çikolata kaplamalı tatlı."
+        description: "Kakaolu pandispanyanın yumuşaklığı, Hindistan cevizinin o kendine has dokusuyla buluştu. İçi bembeyaz ve yumuşacık dolgulu, dışı yoğun çikolata kaplamalı. Isırdığınızda damağınıza yayılan o sütlü ve tatlı Hindistan cevizi aroması, çikolata krizlerinizin en hafif ve en lezzetli çözümü olacak."
     },
     "fransiz-cocie": {
-        name: "Fransız Cocie",
+        name: "Fransız Coockie",
         image: "tatlıfoto/fransızcocie.png",
-        description: "Klasik Fransız tatlısı. Zarif ve lezzetli."
+        description: "Yüksek kaliteli tereyağı ve gerçek Belçika çikolatası parçalarıyla hazırladığımız bu lezzet; Amerikan cookie’lerinin aksine daha narin, daha gevrek ve yoğun aromalıdır. Çikolata severler için gurme bir deneyim."
     },
     "ibiza": {
         name: "Ibiza",
         image: "tatlıfoto/ibiza.png",
-        description: "Tropik aromalı, egzotik görünümlü özel tatlı."
+        description: "Dışını kaplayan nefis bisküvi mantosunun içinde, yumuşacık ve hafif özel kreması saklı. Bisküvinin kıtırlığı ile kremanın yumuşaklığının yarattığı bu tezat uyuma bayılacaksınız."
     },
     "lotus-magnolya": {
         name: "Lotus Magnolya",
         image: "tatlıfoto/lotusmagnolya.png",
-        description: "Lotus bisküvisi ile hazırlanan çiçek formunda özel tatlı."
+        description: "Efsanevi Lotus bisküvisinin karamelize tadı, ipeksi magnolya kremasıyla buluştu. Katman katman bisküvi kırıntıları ve yumuşacık sütlü kremanın bu muhteşem uyumu, hafif ama etkileyici bir tatlı arayanlar için favori tercih. Her kaşıkta pürüzsüz bir mutluluk."
     },
     "firin-sutlac": {
         name: "Fırın Sütlaç",
         image: "tatlıfoto/fırınsütlaç.png",
-        description: "Geleneksel Türk tatlısı. Fırında kızartılmış sütlaç."
+        description: "Sadece pirinç, şeker ve bol süt. Katkısız, nişasta kokmayan, kaşığa gelen o mükemmel dokusuyla geleneksel lezzetimiz. Üzerindeki hafif yanık kabuğu ve içindeki akışkan kıvamıyla sütlü tatlı severlerin vazgeçilmezi."
     },
     "fistikli-cookie": {
         name: "Fıstıklı Cookie",
         image: "tatlıfoto/fıstıklıcookie.png",
-        description: "Antep fıstıklı yumuşak cookie."
+        description: "Antep fıstığını bu kurabiyede baş tacı yaptık. Kaliteli tereyağı ve bol fıstıkla hazırlanan hamuru, fırından çıktığı an yayılan kokusuyla büyülüyor. Hem doyurucu hem de zengin aromalı."
     }
 };
 
@@ -326,7 +326,7 @@ const pastaCesitleri = [
     { key: "pasta-fistikli-royal", name: "Fıstıklı Roral Kremalı Pasta", image: "tatlıfoto/fıstıklıroyalkremalıpasta.png" },
     { key: "pasta-rulo", name: "Rulo Pasta", image: "tatlıfoto/rulopasta.png" },
     { key: "pasta-porsiyon-1", name: "Porsiyon Pasta", image: "tatlıfoto/porsiyonpasta1.png" },
-    { key: "pasta-porsiyon-2", name: "Porsiyon Pasta Özel", image: "tatlıfoto/porsiyonpasta2.png" }
+    { key: "pasta-porsiyon-2", name: "Porsiyon Çikolatalı Fıstıklı Pasta", image: "tatlıfoto/porsiyonpasta2.png" }
 ];
 
 // Puff & Profiterol çeşitleri
