@@ -800,13 +800,20 @@ body {
     }
 
     .modal-content {
-        max-height: 100vh;
-        min-height: 100vh;
+        max-height: none;
+        min-height: auto;
         border-radius: 0;
     }
 
     .modal-body {
         padding: 60px 20px 30px;
+    }
+
+    /* Çeşitler modal için max-height kaldır */
+    .modal-large .cesitler-grid {
+        max-height: none;
+        overflow-y: visible;
+        padding-right: 0;
     }
 
     .modal-close {
@@ -826,9 +833,11 @@ body {
     }
 
     .modal-image {
+        width: 100%;
         height: auto;
-        max-height: 300px;
+        max-height: none;
         margin-bottom: 25px;
+        object-fit: contain;
     }
 
     .modal-title {
@@ -985,7 +994,10 @@ body {
     }
 
     .modal-image {
-        max-height: 250px;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
     }
 
     .modal-title {

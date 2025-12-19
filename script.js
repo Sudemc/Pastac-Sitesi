@@ -373,6 +373,8 @@ document.querySelectorAll('.tatli-card').forEach(card => {
         if (kategoriler[tatliKey]) {
             showCesitlerModal(tatliKey);
         } else {
+            // Standalone tatlı - kategoriden gelmiyoruz
+            activeKategori = null;
             showModal(tatliKey);
         }
     });
