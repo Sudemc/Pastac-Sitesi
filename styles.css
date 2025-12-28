@@ -727,6 +727,13 @@ body {
         border-bottom: none;
     }
 
+    /* Tablet ve mobilde tatlı bilgisi her zaman görünür */
+    .tatli-info {
+        transform: translateY(0);
+        opacity: 1;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+    }
+
     .cesitler-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
