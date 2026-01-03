@@ -88,6 +88,16 @@ const tatlilar = {
         image: "tatlıfoto/fıstıklısansebastian.png",
         description: "Peynir dolgusunun hafifliği, Antep fıstığı sosunun zenginliğiyle birleşti. Klasik San Sebastian lezzetini, bol fıstık sosu ile bambaşka bir boyuta taşıdık. Fıstık severler için vazgeçilmez bir tercih."
     },
+    "san-sebastian-sade": {
+        name: "Sade San Sebastian",
+        image: "tatlıfoto/sadesansebastian.png",
+        description: "Fırından çıktığı andaki o muhteşem kokusu ve sarsılan o meşhur kıvamıyla San Sebastian Cheesecake'imiz sizi bekliyor. Dış kabuğundaki hafif isli karamel tadı, içindeki sütlü ve ferah dokuyla birleşerek benzersiz bir uyum yaratıyor. İster çikolata soslu, ister sade... Bu lezzeti bir kez tattığınızda vazgeçemeyeceksiniz."
+    },
+    "san-sebastian-cilekli-yeni": {
+        name: "Çilekli San Sebastian",
+        image: "tatlıfoto/cileklisansebastian.jpg",
+        description: "Klasik San Sebastian lezzetini, gerçek çileklerin ferahlığıyla yeniden yorumladık. Tamamen pürüzsüz yapısıyla damakta adeta eriyen bir deneyim sunuyoruz. Mevsimin en taze çileklerinden elde edilen doğal püre, özel peynir harcımızla bütünleşerek o meşhur akışkan kıvama pembe bir dokunuş katıyor. Hem hafif, hem meyveli, hem de inanılmaz derecede kremsi."
+    },
 
     // EKLER ÇEŞİTLERİ
     "ekler-fistikli": {
@@ -291,7 +301,9 @@ const cheesecakeCesitleri = [
 const sanSebastianCesitleri = [
     { key: "san-sebastian-cilekli", name: "Çilekli Sade San Sebastian", image: "tatlıfoto/cileklisadesansebastian.png" },
     { key: "san-sebastian-cikolatali", name: "Çikolatalı San Sebastian", image: "tatlıfoto/çikolatalısebastian.png" },
-    { key: "san-sebastian-fistikli", name: "Fıstıklı San Sebastian", image: "tatlıfoto/fıstıklısansebastian.png" }
+    { key: "san-sebastian-fistikli", name: "Fıstıklı San Sebastian", image: "tatlıfoto/fıstıklısansebastian.png" },
+    { key: "san-sebastian-sade", name: "Sade San Sebastian", image: "tatlıfoto/sadesansebastian.png" },
+    { key: "san-sebastian-cilekli-yeni", name: "Çilekli San Sebastian", image: "tatlıfoto/cileklisansebastian.jpg" }
 ];
 
 // Ekler çeşitleri
