@@ -1,4 +1,87 @@
+// Supabase Configuration
+const SUPABASE_URL = 'https://tskejfganbdkylhqytfu.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRza2VqZmdhbmJka3lsaHF5dGZ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjkzMjcyOTEsImV4cCI6MjA4NDkwMzI5MX0.W7lijafeCiO-6AAcIr4tUJEA1R8kXCMqYWLQqD7pkhQ';
+
+// Supabase client (will be initialized if SDK is loaded)
+let supabaseClient = null;
+let useSupabase = false;
+
+// Try to initialize Supabase
+async function initSupabase() {
+    try {
+        if (typeof supabase !== 'undefined') {
+            supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+            // Test connection
+            const { data, error } = await supabaseClient.from('categories').select('id').limit(1);
+            if (!error) {
+                useSupabase = true;
+                console.log('✅ Supabase bağlantısı başarılı');
+                await loadDataFromSupabase();
+            }
+        }
+    } catch (err) {
+        console.log('⚠️ Supabase bağlantısı kurulamadı, statik veri kullanılıyor');
+    }
+}
+
+// Load data from Supabase and update local objects
+async function loadDataFromSupabase() {
+    try {
+        // Load categories
+        const { data: categories } = await supabaseClient.from('categories').select('*').order('sort_order');
+
+        // Load products
+        const { data: products } = await supabaseClient.from('products').select('*').order('sort_order');
+
+        if (products && products.length > 0) {
+            // Update tatlilar object
+            products.forEach(p => {
+                tatlilar[p.id] = {
+                    name: p.name,
+                    image: p.image,
+                    description: p.description
+                };
+            });
+
+            // Update category arrays
+            if (categories) {
+                categories.forEach(cat => {
+                    const categoryProducts = products.filter(p => p.category_id === cat.id);
+                    const cesitler = categoryProducts.map(p => ({
+                        key: p.id,
+                        name: p.name,
+                        image: p.image
+                    }));
+
+                    if (kategoriler[cat.id]) {
+                        kategoriler[cat.id].cesitler = cesitler;
+                        kategoriler[cat.id].baslik = cat.display_name;
+                    } else {
+                        kategoriler[cat.id] = {
+                            cesitler: cesitler,
+                            baslik: cat.display_name
+                        };
+                    }
+                });
+            }
+
+            console.log(`📦 ${products.length} ürün yüklendi`);
+        }
+    } catch (err) {
+        console.error('Veri yüklenemedi:', err);
+    }
+}
+
+// Initialize on load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSupabase);
+} else {
+    initSupabase();
+}
+
 // Tatlı verileri - Gerçek görseller ile güncellenmiş (İçerik listeleri kaldırıldı)
+// Bu statik veri, Supabase bağlantısı kurulamazsa fallback olarak kullanılır
 const tatlilar = {
     // CHEESECAKE ÇEŞİTLERİ
     "cheesecake-baklavali": {
