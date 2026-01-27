@@ -5,36 +5,35 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 // Supabase client (will be initialized if SDK is loaded)
 let supabaseClient = null;
 let useSupabase = false;
+let supabaseDataLoaded = false;
 
-// Try to initialize Supabase
+// Try to initialize Supabase (non-blocking, runs in background)
 async function initSupabase() {
     try {
         if (typeof supabase !== 'undefined') {
             supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-            // Test connection
-            const { data, error } = await supabaseClient.from('categories').select('id').limit(1);
-            if (!error) {
-                useSupabase = true;
-                console.log('✅ Supabase bağlantısı başarılı');
-                await loadDataFromSupabase();
-            }
+            await loadDataFromSupabase();
         }
     } catch (err) {
         console.log('⚠️ Supabase bağlantısı kurulamadı, statik veri kullanılıyor');
     }
 }
 
-// Load data from Supabase and update local objects
+// Load data from Supabase and update local objects (parallel queries)
 async function loadDataFromSupabase() {
     try {
-        // Load categories
-        const { data: categories } = await supabaseClient.from('categories').select('*').order('sort_order');
+        // Parallel queries with Promise.all - much faster!
+        const [categoriesResult, productsResult] = await Promise.all([
+            supabaseClient.from('categories').select('*').order('sort_order'),
+            supabaseClient.from('products').select('*').order('sort_order')
+        ]);
 
-        // Load products
-        const { data: products } = await supabaseClient.from('products').select('*').order('sort_order');
+        const categories = categoriesResult.data;
+        const products = productsResult.data;
 
         if (products && products.length > 0) {
+            useSupabase = true;
+
             // Update tatlilar object
             products.forEach(p => {
                 tatlilar[p.id] = {
@@ -66,19 +65,19 @@ async function loadDataFromSupabase() {
                 });
             }
 
-            console.log(`📦 ${products.length} ürün yüklendi`);
+            supabaseDataLoaded = true;
+            console.log(`✅ Supabase: ${products.length} ürün yüklendi`);
         }
     } catch (err) {
-        console.error('Veri yüklenemedi:', err);
+        console.log('⚠️ Supabase verisi yüklenemedi, statik veri kullanılıyor');
     }
 }
 
-// Initialize on load
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initSupabase);
-} else {
+// Initialize Supabase in background after page loads (non-blocking)
+// Page will show immediately with static data, then update if Supabase data differs
+setTimeout(() => {
     initSupabase();
-}
+}, 100);
 
 // Tatlı verileri - Gerçek görseller ile güncellenmiş (İçerik listeleri kaldırıldı)
 // Bu statik veri, Supabase bağlantısı kurulamazsa fallback olarak kullanılır
