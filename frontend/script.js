@@ -1,10 +1,13 @@
-// Nazike Cücemen - Mikroservis Frontend
-// API URL'leri (Production - Render.com)
-const MENU_SERVICE_URL = 'https://menu-service-zsp6.onrender.com';
-const COMM_SERVICE_URL = 'https://communication-service-yd6s.onrender.com';
+// Nazike Cücemen - Supabase Frontend
+// Supabase Configuration
+const SUPABASE_URL = 'https://tskejfganbdkylhqytfu.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRza2VqZmdhbmJka3lsaHF5dGZ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjkzMjcyOTEsImV4cCI6MjA4NDkwMzI5MX0.W7lijafeCiO-6AAcIr4tUJEA1R8kXCMqYWLQqD7pkhQ';
+
+// Supabase client
+let supabaseClient = null;
 
 // Global state
-let menuData = null;
+let menuData = { categories: [], standalone: [] };
 let currentCategory = null;
 
 // DOM elementleri
@@ -18,17 +21,69 @@ const modalCloseButtons = document.querySelectorAll('.modal-close');
 
 // Sayfa yüklendiğinde
 document.addEventListener('DOMContentLoaded', async () => {
+    initSupabase();
     await loadMenu();
     setupEventListeners();
 });
 
-// Menü verilerini yükle
+// Supabase'i başlat
+function initSupabase() {
+    try {
+        if (window.supabase && window.supabase.createClient) {
+            supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+            console.log('✅ Supabase bağlantısı kuruldu');
+        }
+    } catch (err) {
+        console.error('Supabase başlatılamadı:', err);
+    }
+}
+
+// Menü verilerini Supabase'den yükle
 async function loadMenu() {
     try {
-        const response = await fetch(`${MENU_SERVICE_URL}/menu`);
-        if (!response.ok) throw new Error('Menü yüklenemedi');
+        if (!supabaseClient) {
+            throw new Error('Supabase bağlantısı yok');
+        }
 
-        menuData = await response.json();
+        // Paralel sorgular ile kategorileri ve ürünleri çek
+        const [categoriesResult, productsResult] = await Promise.all([
+            supabaseClient.from('categories').select('*').order('sort_order'),
+            supabaseClient.from('products').select('*').order('sort_order')
+        ]);
+
+        if (categoriesResult.error) throw categoriesResult.error;
+        if (productsResult.error) throw productsResult.error;
+
+        const categories = categoriesResult.data || [];
+        const products = productsResult.data || [];
+
+        // Menü verisini oluştur
+        menuData.categories = categories.map(cat => ({
+            id: cat.id,
+            displayName: cat.display_name,
+            coverImage: cat.cover_image,
+            items: products
+                .filter(p => p.category_id === cat.id)
+                .map(p => ({
+                    id: p.id,
+                    name: p.name,
+                    description: p.description,
+                    image: p.image
+                }))
+        }));
+
+        // Bağımsız ürünleri ayır
+        menuData.standalone = products
+            .filter(p => p.is_standalone || !p.category_id)
+            .map(p => ({
+                id: p.id,
+                name: p.name,
+                description: p.description,
+                image: p.image
+            }));
+
+        console.log(`✅ ${categories.length} kategori, ${products.length} ürün yüklendi`);
+
         renderCategories();
         renderStandalone();
     } catch (error) {
@@ -39,12 +94,20 @@ async function loadMenu() {
 
 // Kategorileri render et
 function renderCategories() {
-    if (!menuData || !menuData.categories) return;
+    if (!menuData.categories.length) return;
 
-    const categoriesHTML = menuData.categories.map(category => `
+    const categoriesHTML = menuData.categories.map(category => {
+        // WebP versiyonunu kullan
+        const webpImage = category.coverImage ?
+            category.coverImage.replace('tatlıfoto/', 'tatlıfoto/webp/').replace(/\.(png|jpg|jpeg)$/i, '.webp') : '';
+
+        return `
         <div class="tatli-card" data-category="${category.id}">
             <div class="tatli-image">
-                <img src="${category.coverImage}" alt="${category.displayName}" loading="lazy">
+                <picture>
+                    <source srcset="${webpImage}" type="image/webp">
+                    <img src="${category.coverImage}" alt="${category.displayName}" loading="lazy">
+                </picture>
                 <div class="tatli-overlay">
                     <span class="overlay-text">${category.items.length} Çeşit</span>
                 </div>
@@ -54,19 +117,26 @@ function renderCategories() {
                 <span class="tatli-action">Çeşitleri gör →</span>
             </div>
         </div>
-    `).join('');
+    `}).join('');
 
     tatlilarContainer.innerHTML = categoriesHTML;
 }
 
 // Bağımsız tatlıları render et
 function renderStandalone() {
-    if (!menuData || !menuData.standalone) return;
+    if (!menuData.standalone.length) return;
 
-    const standaloneHTML = menuData.standalone.map(item => `
+    const standaloneHTML = menuData.standalone.map(item => {
+        const webpImage = item.image ?
+            item.image.replace('tatlıfoto/', 'tatlıfoto/webp/').replace(/\.(png|jpg|jpeg)$/i, '.webp') : '';
+
+        return `
         <div class="tatli-card" data-item="${item.id}">
             <div class="tatli-image">
-                <img src="${item.image}" alt="${item.name}" loading="lazy">
+                <picture>
+                    <source srcset="${webpImage}" type="image/webp">
+                    <img src="${item.image}" alt="${item.name}" loading="lazy">
+                </picture>
                 <div class="tatli-overlay">
                     <span class="overlay-text">Detayları Gör</span>
                 </div>
@@ -76,12 +146,12 @@ function renderStandalone() {
                 <span class="tatli-action">Detayları gör →</span>
             </div>
         </div>
-    `).join('');
+    `}).join('');
 
     tatlilarContainer.innerHTML += standaloneHTML;
 }
 
-// Event listener'ları kur (Event Delegation)
+// Event listener'ları kur
 function setupEventListeners() {
     // Tatlı kartlarına tıklama (Event Delegation)
     tatlilarContainer.addEventListener('click', (e) => {
@@ -98,7 +168,7 @@ function setupEventListeners() {
         }
     });
 
-    // Çeşitler grid'ine tıklama (Event Delegation)
+    // Çeşitler grid'ine tıklama
     cesitlerGrid.addEventListener('click', (e) => {
         const card = e.target.closest('.cesit-card');
         if (!card) return;
@@ -171,16 +241,23 @@ function showCategoryModal(categoryId) {
     currentCategory = category;
     cesitlerTitle.textContent = category.displayName;
 
-    cesitlerGrid.innerHTML = category.items.map(item => `
+    cesitlerGrid.innerHTML = category.items.map(item => {
+        const webpImage = item.image ?
+            item.image.replace('tatlıfoto/', 'tatlıfoto/webp/').replace(/\.(png|jpg|jpeg)$/i, '.webp') : '';
+
+        return `
         <div class="cesit-card" data-item="${item.id}">
             <div class="cesit-image">
-                <img src="${item.image}" alt="${item.name}" loading="lazy">
+                <picture>
+                    <source srcset="${webpImage}" type="image/webp">
+                    <img src="${item.image}" alt="${item.name}" loading="lazy">
+                </picture>
             </div>
             <div class="cesit-info">
                 <h4>${item.name}</h4>
             </div>
         </div>
-    `).join('');
+    `}).join('');
 
     cesitlerModal.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -194,7 +271,6 @@ function closeCesitlerModal() {
 
 // Ürün detay modalını göster
 function showItemModal(itemId) {
-    // Tüm kategorilerde ve standalone'da ara
     let item = null;
     let categoryName = 'Tatlı';
 
@@ -211,30 +287,30 @@ function showItemModal(itemId) {
     // Standalone'da ara
     if (!item) {
         item = menuData.standalone.find(i => i.id === itemId);
-        if (item) categoryName = 'Bağımsız Tatlılar';
+        if (item) categoryName = 'Özel Lezzetler';
     }
 
     if (!item) return;
 
+    const webpImage = item.image ?
+        item.image.replace('tatlıfoto/', 'tatlıfoto/webp/').replace(/\.(png|jpg|jpeg)$/i, '.webp') : '';
+
     modalBody.innerHTML = `
-        <img src="${item.image}" alt="${item.name}" class="modal-image" loading="lazy">
+        <picture>
+            <source srcset="${webpImage}" type="image/webp">
+            <img src="${item.image}" alt="${item.name}" class="modal-image" loading="lazy">
+        </picture>
         <h2 class="modal-title">${item.name}</h2>
-        <p class="modal-description">${item.description}</p>
+        <p class="modal-description">${item.description || ''}</p>
         
         <div class="modal-siparis">
-            <button class="btn-siparis btn-whatsapp" 
-                    data-product="${item.name}" 
-                    data-category="${categoryName}">
+            <a href="https://wa.me/905558033164?text=Merhaba, ${encodeURIComponent(item.name)} hakkında bilgi almak istiyorum." 
+               class="btn-siparis" 
+               target="_blank">
                 WhatsApp ile Bilgi Al
-            </button>
+            </a>
         </div>
     `;
-
-    // WhatsApp butonuna event listener ekle
-    const whatsappBtn = modalBody.querySelector('.btn-whatsapp');
-    whatsappBtn.addEventListener('click', () => {
-        requestWhatsAppLink(item.name, categoryName);
-    });
 
     tatliModal.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -244,27 +320,6 @@ function showItemModal(itemId) {
 function closeItemModal() {
     tatliModal.classList.remove('active');
     document.body.style.overflow = 'auto';
-}
-
-// WhatsApp linki iste
-async function requestWhatsAppLink(productName, categoryName) {
-    try {
-        const params = new URLSearchParams({
-            product: productName,
-            category: categoryName
-        });
-
-        const response = await fetch(`${COMM_SERVICE_URL}/whatsapp-link?${params}`);
-        if (!response.ok) throw new Error('Link oluşturulamadı');
-
-        const data = await response.json();
-        window.open(data.link, '_blank');
-    } catch (error) {
-        console.error('WhatsApp linki alınırken hata:', error);
-        // Fallback: Direkt WhatsApp linki oluştur
-        const message = encodeURIComponent(`Merhaba, ${categoryName} grubundaki ${productName} hakkında bilgi almak istiyorum.`);
-        window.open(`https://wa.me/905558033164?text=${message}`, '_blank');
-    }
 }
 
 // Hata mesajı göster
