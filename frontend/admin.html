@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Nazike Cücemen</title>
+    <link rel="stylesheet" href="admin.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-box">
+            <h1>Admin Panel</h1>
+            <p>Nazike Cücemen Pastacı</p>
+            <form id="loginForm">
+                <input type="password" id="passwordInput" placeholder="Şifre" required>
+                <button type="submit">Giriş Yap</button>
+                <p id="loginError" class="error-text"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="admin-panel" style="display: none;">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="header-left">
+                <h1>Admin Panel</h1>
+                <span class="header-subtitle">Nazike Cücemen</span>
+            </div>
+            <div class="header-right">
+                <a href="index.html" class="btn-secondary" target="_blank">Siteyi Görüntüle</a>
+                <button id="logoutBtn" class="btn-logout">Çıkış</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Sidebar -->
+            <aside class="admin-sidebar">
+                <nav class="sidebar-nav">
+                    <button class="nav-item active" data-section="products">
+                        <span class="nav-icon">📦</span>
+                        Ürünler
+                    </button>
+                    <button class="nav-item" data-section="categories">
+                        <span class="nav-icon">📁</span>
+                        Kategoriler
+                    </button>
+                    <button class="nav-item" data-section="settings">
+                        <span class="nav-icon">⚙️</span>
+                        Ayarlar
+                    </button>
+                </nav>
+            </aside>
+
+            <!-- Content Area -->
+            <div class="admin-content">
+                <!-- Products Section -->
+                <section id="productsSection" class="content-section active">
+                    <div class="section-header">
+                        <h2>Ürünler</h2>
+                        <button id="addProductBtn" class="btn-primary">+ Yeni Ürün Ekle</button>
+                    </div>
+
+                    <!-- Filter -->
+                    <div class="filter-bar">
+                        <select id="categoryFilter">
+                            <option value="">Tüm Kategoriler</option>
+                        </select>
+                        <input type="text" id="searchInput" placeholder="Ürün ara...">
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div id="productsGrid" class="products-grid">
+                        <!-- Products will be loaded here -->
+                    </div>
+                </section>
+
+                <!-- Categories Section -->
+                <section id="categoriesSection" class="content-section">
+                    <div class="section-header">
+                        <h2>Kategoriler</h2>
+                        <button id="addCategoryBtn" class="btn-primary">+ Yeni Kategori Ekle</button>
+                    </div>
+
+                    <div id="categoriesGrid" class="categories-grid">
+                        <!-- Categories will be loaded here -->
+                    </div>
+                </section>
+
+                <!-- Settings Section -->
+                <section id="settingsSection" class="content-section">
+                    <div class="section-header">
+                        <h2>Ayarlar</h2>
+                    </div>
+
+                    <div class="settings-form">
+                        <div class="form-group">
+                            <label>Admin Şifresi Değiştir</label>
+                            <input type="password" id="newPassword" placeholder="Yeni şifre">
+                            <input type="password" id="confirmPassword" placeholder="Şifreyi tekrar girin">
+                            <button id="changePasswordBtn" class="btn-primary">Şifreyi Değiştir</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="productModalTitle">Yeni Ürün Ekle</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form id="productForm">
+                <div class="form-group">
+                    <label>Ürün Adı *</label>
+                    <input type="text" id="productName" required>
+                </div>
+                <div class="form-group">
+                    <label>Kategori</label>
+                    <select id="productCategory">
+                        <option value="">Bağımsız Ürün (Kategorisiz)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Açıklama</label>
+                    <textarea id="productDescription" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Görsel</label>
+                    <div class="image-upload">
+                        <input type="file" id="productImage" accept="image/*">
+                        <div id="imagePreview" class="image-preview">
+                            <span>Görsel seçmek için tıklayın</span>
+                        </div>
+                    </div>
+                    <input type="hidden" id="productImageUrl">
+                </div>
+                <div class="form-group">
+                    <label>Sıralama</label>
+                    <input type="number" id="productOrder" value="0" min="0">
+                </div>
+                <input type="hidden" id="productId">
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary modal-cancel">İptal</button>
+                    <button type="submit" class="btn-primary">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Category Modal -->
+    <div id="categoryModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="categoryModalTitle">Yeni Kategori Ekle</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form id="categoryForm">
+                <div class="form-group">
+                    <label>Kategori ID *</label>
+                    <input type="text" id="categoryId" required placeholder="ornek-kategori">
+                    <small>Küçük harf, tire kullanın. Boşluk kullanmayın.</small>
+                </div>
+                <div class="form-group">
+                    <label>Görünen Ad *</label>
+                    <input type="text" id="categoryDisplayName" required placeholder="Örnek Kategori">
+                </div>
+                <div class="form-group">
+                    <label>Kapak Görseli</label>
+                    <div class="image-upload">
+                        <input type="file" id="categoryImage" accept="image/*">
+                        <div id="categoryImagePreview" class="image-preview">
+                            <span>Görsel seçmek için tıklayın</span>
+                        </div>
+                    </div>
+                    <input type="hidden" id="categoryCoverImage">
+                </div>
+                <div class="form-group">
+                    <label>Sıralama</label>
+                    <input type="number" id="categoryOrder" value="0" min="0">
+                </div>
+                <input type="hidden" id="editingCategoryId">
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary modal-cancel">İptal</button>
+                    <button type="submit" class="btn-primary">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content modal-small">
+            <div class="modal-header">
+                <h3>Silme Onayı</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="deleteMessage">Bu öğeyi silmek istediğinizden emin misiniz?</p>
+            </div>
+            <div class="form-actions">
+                <button class="btn-secondary modal-cancel">İptal</button>
+                <button id="confirmDeleteBtn" class="btn-danger">Sil</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
